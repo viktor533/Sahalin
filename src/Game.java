@@ -19,21 +19,15 @@ public class Game {
         lands.add(name);
     }
 
-    public void addResource(String name) {
-        resources.add(name);
-    }
+    public void addResource(String name) { resources.add(name); }
 
     public void addBuild(String name) {
         builds.addBuild(name);
     }
 
-    public void setBuildCost(String name, Resource resource, int cost) {
-        builds.getBuild(name).setCoast(resource, cost);
-    }
+    public void setBuildCost(String name, Resource resource, int cost) { builds.getBuild(name).setCoast(resource, cost); }
 
-    public void setSettings(Settings settings) {
-        this.settings = settings;
-    }
+    public void setSettings(Settings settings) { this.settings = settings; }
 
     public void readLands() {
         lands.readFromFile(settings.getLandsFileName());
@@ -56,4 +50,6 @@ public class Game {
     }
 
     public Iterator<Land> getLandsIterator() { return  lands.getIterator(); }
+
+    public void clearLands() { lands.clear(); }
 }

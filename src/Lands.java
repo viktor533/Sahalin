@@ -39,4 +39,8 @@ public class Lands {
         }
     }
 
+    public void clear() {
+        lands.clear();
+    }
+
 }

@@ -1,8 +1,5 @@
-import javax.swing.*;
-
 /**
- * Created by Viktor on 14.01.2016.
+ * Created by Viktor on 15.01.2016.
  */
 public class Test {
-    private JPanel panel1;
 }

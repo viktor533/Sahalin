@@ -23,11 +23,12 @@ public class MainWindow extends JFrame {
     public void drawWindow() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 400, 400);
-        JPanel generalPanel = new JPanel(new BorderLayout());
+        JPanel generalPanel = new JPanel();
+        generalPanel.setLayout(new BoxLayout(generalPanel, BoxLayout.Y_AXIS));
         JButton gameEditor = new JButton("Game Editor");
         JButton fieldEditor = new JButton("Field Editor");
 
-        fieldEditor.setMaximumSize(new Dimension(200, 50));
+        //fieldEditor.setMaximumSize(new Dimension(200, 50));
 
         JButton gameButton = new JButton("Game");
         gameEditor.addActionListener(new ActionListener() {
@@ -39,12 +40,9 @@ public class MainWindow extends JFrame {
                 setVisible(false);
             }
         });
-        generalPanel.add(gameEditor, BorderLayout.NORTH);
-        generalPanel.add(fieldEditor, BorderLayout.CENTER);
-        generalPanel.add(gameButton, BorderLayout.SOUTH);
-
-
-
+        generalPanel.add(gameEditor);
+        generalPanel.add(fieldEditor);
+        generalPanel.add(gameButton);
 
         add(generalPanel);
     }
